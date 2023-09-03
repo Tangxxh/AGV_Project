@@ -1,0 +1,11 @@
+"/starttracking"    Bool	#开启追踪
+"/startlinefollow"  Bool    #开启巡线
+"/startscrap"       Bool    #开启抓取
+"/startinit"        Bool    #开启初始化
+
+"/led_flag"         Bool    #照明灯控
+"/alarm_flag"       Int16   #报警灯控
+"/heat_flag"        Bool    #加热控
+"/fan_flag"         Bool    #风扇控
+"/emergency_flag"   Bool    #风扇控
+"/mark"             Int16   #打标机控

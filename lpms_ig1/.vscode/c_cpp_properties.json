@@ -1,0 +1,30 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/nvidia/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/nvidia/catkin_ws/src/hk_sdk_arm/include/**",
+        "/home/nvidia/catkin_ws/src/relocalization/include/**",
+        "/home/nvidia/catkin_ws/src/motor_canopen/include/**",
+        "/home/nvidia/catkin_ws/src/mpc_ros/include/**",
+        "/home/nvidia/catkin_ws/src/robot_bringup/include/**",
+        "/home/nvidia/catkin_ws/src/servingbot/serving_mobile/serving_simuation/servingbot_fake/include/**",
+        "/home/nvidia/catkin_ws/src/servingbot/serving_mobile/serving_simuation/servingbot_gazebo/include/**",
+        "/home/nvidia/catkin_ws/src/servingbot/serving_mobile/servingbot_slam/include/**",
+        "/home/nvidia/catkin_ws/src/usb_cam/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-arm64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

@@ -1,0 +1,5 @@
+<launch>
+    <arg name="project_name" default="hk_control"/>
+
+    <node pkg="hk_sdk_arm" type="hk_sdk_arm_node" name="hk_sdk_arm_node"/>
+</launch>

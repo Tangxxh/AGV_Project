@@ -1,0 +1,7 @@
+<launch>
+	<!-- openzen IMU Sensor-->
+	<node pkg="openzen_sensor" type="openzen_sensor_node" name="imu_node" output="screen">
+		<param name="baudrate" value="921600" />
+		<param name="frame_id" value="imu_link" />
+	</node>
+</launch>

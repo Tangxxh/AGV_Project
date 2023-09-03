@@ -1,0 +1,25 @@
+<launch>
+  <param name="gps_sub_topic" value = "/fix" />                  // 订阅GPS数据话题名称
+  <param name="output_frame_name" value = "map" />               // 输出frame名称
+  <param name="auto_get_origin_gps" value = "false" />            // 起始点(数据集第一个GPS数据)经纬高度信息 true:auto
+  <param name="z_rotate_value" value = "0.0" />                  // 对整个轨迹进行旋转操作
+  <param name="lon_origin" value = "113.004071534" />          // 手动输入起始点经度值 119.665701650
+  <param name="lat_origin" value = "28.067428248" />           // 手动输入起始点纬度值 45.451722379
+  <param name="write_flag" value = "false" />
+       
+
+  <node pkg="geo_to_enu" name="geo_to_enu" type="geo_trans_enu" output="screen" />
+
+  <!-- A simple launch file for the nmea_serial_driver node. "/dev/RTK-ttl"  -->
+
+  <node pkg="nmea_navsat_driver" name="nmea_serial_driver"  type="nmea_serial_driver" output="screen">
+    <param name="port" value="/dev/RTK-ttl" />   
+    <param name="baud" value="115200" />
+    <param name="frame_id" value="gps" />
+    <param name="use_GNSS_time" value="False" />
+    <param name="time_ref_source" value="gps" />
+    <param name="useRMC" value="False" />
+  </node>
+ 
+  <!--node pkg="rviz" type="rviz" name="rviz" params="-d $(find gps_to_xyz)/rviz/gps_to_xyz.rviz" /-->
+</launch>

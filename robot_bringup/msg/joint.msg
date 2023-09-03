@@ -1,0 +1,2 @@
+float64 bigJoint_deg
+float64 smallJoint_deg

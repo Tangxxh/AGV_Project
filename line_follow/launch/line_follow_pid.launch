@@ -1,0 +1,5 @@
+<launch>
+    <arg name="project_name" default="line_follow"/>
+
+    <node pkg="line_follow" type="line_follow" name="line_follow" output="screen"/>
+</launch>

@@ -1,0 +1,7 @@
+<launch>
+    <arg name="project_name" default="process_control"/>
+    <arg name="utd" default="0.45"/>
+
+    <node pkg="process_control" type="process_control" name="process_control" args="$(arg utd)" output="screen">
+    </node>
+</launch>

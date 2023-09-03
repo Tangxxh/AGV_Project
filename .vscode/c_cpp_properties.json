@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/nvidia/catkin_ws/devel/include/**",
+                "/opt/ros/noetic/include/**",
+                "/home/nvidia/catkin_ws/src/arm_move/include/**",
+                "/home/nvidia/catkin_ws/src/hk_sdk_arm/include/**",
+                "/home/nvidia/catkin_ws/src/relocalization/include/**",
+                "/home/nvidia/catkin_ws/src/robot_bringup/include/**",
+                "/usr/include/**",
+                "${workspaceFolder}/robot_bringup/include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "linux-gcc-arm64"
+        }
+    ],
+    "version": 4
+}

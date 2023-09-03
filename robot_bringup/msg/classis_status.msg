@@ -1,0 +1,8 @@
+float64 battery_voltage
+bool emergency_stop
+bool voltage_fault
+bool motor_fault
+bool front_touch
+bool back_touch
+bool forward_deny
+bool backward_deny

@@ -1,0 +1,61 @@
+<launch>
+    <node name="controller" pkg="pid" type="controller" ns="big_arm" output="screen" >
+      <param name="Kp" value="500.0" />
+      <param name="Ki" value="0.0" />
+      <param name="Kd" value="0.0" />
+      <param name="upper_limit" value="1500" />
+      <param name="lower_limit" value="-1500" />
+      <param name="windup_limit" value="100" />
+      <param name="max_loop_frequency" value="25.0" />
+      <param name="min_loop_frequency" value="25.0" />
+      <remap from="setpoint" to="/big_target_joint_deg" />
+      <remap from="state" to="/big_joint_deg" />
+      <remap from="control_effort" to="/big_control_effort" />
+      <remap from="pid_enable" to="/big_pid_enable" />
+    </node>
+
+    <node name="controller" pkg="pid" type="controller" ns="small_arm_vertical" output="screen" >
+      <param name="Kp" value="-5000.0" />
+      <param name="Ki" value="0.0" />
+      <param name="Kd" value="0.0" />
+      <param name="upper_limit" value="15000" />
+      <param name="lower_limit" value="-15000" />
+      <param name="windup_limit" value="800" />
+      <param name="max_loop_frequency" value="25.0" />
+      <param name="min_loop_frequency" value="25.0" />
+      <remap from="setpoint" to="/big_joint_deg" />
+      <remap from="state" to="/small_joint_deg" />
+      <remap from="control_effort" to="/small_control_effort" />
+      <remap from="pid_enable" to="/small_vertical_pid_enable" />
+     </node>
+
+    <node name="controller" pkg="pid" type="controller" ns="small_arm" output="screen" >
+      <param name="Kp" value="-5000.0" />
+      <param name="Ki" value="0.0" />
+      <param name="Kd" value="0.0" />
+      <param name="upper_limit" value="15000" />
+      <param name="lower_limit" value="-15000" />
+      <param name="windup_limit" value="800" />
+      <param name="max_loop_frequency" value="25.0" />
+      <param name="min_loop_frequency" value="25.0" />
+      <remap from="setpoint" to="/small_target_joint_deg" />
+      <remap from="state" to="/small_joint_deg" />
+      <remap from="control_effort" to="/small_control_effort" />
+      <remap from="pid_enable" to="/small_pid_enable" />
+     </node>
+
+    <node name="controller" pkg="pid" type="controller" ns="mid_control" output="screen" >
+      <param name="Kp" value="-3.0" />
+      <param name="Ki" value="0.0" />
+      <param name="Kd" value="0.0" />
+      <param name="upper_limit" value="6000" />
+      <param name="lower_limit" value="-6000" />
+      <param name="windup_limit" value="800" />
+      <param name="max_loop_frequency" value="5.0" />
+      <param name="min_loop_frequency" value="5.0" />
+      <remap from="setpoint" to="/mid_set_point" />
+      <remap from="state" to="/y_error" />
+      <remap from="control_effort" to="/LR_effort" />
+      <remap from="pid_enable" to="/LR_pid_enable" />
+     </node>
+</launch>

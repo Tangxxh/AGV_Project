@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="robot_bringup" name="getdis" type="getdis" output="screen">
+    <param name="uart_id" type="string" value="/dev/Tof-485"/>
+  </node>
+</launch>
